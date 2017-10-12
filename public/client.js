@@ -8,10 +8,14 @@ myApp.controller('PageController', function ($http) {
     var vm = this;
 
     vm.sendMessage = function() {
-        console.log('you clicked me!', vm.message);
+        var messageToSend = {
+            message: vm.message
+        };
+        console.log('you clicked me!', messageToSend);
         $http({
             method: 'POST',
             url: '/send',
+            data: messageToSend
         });
     };
 });

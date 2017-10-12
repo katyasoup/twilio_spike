@@ -7,15 +7,22 @@ var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
 
 router.post('/', function(req, res){
+    var toSend = req.body.message;
     client.messages.create({
-        body: 'Hey, your API connection totally works!', // this should be grabbed from input field on DOM
+        body: toSend, // this should be grabbed from input field on DOM
         to: process.env.TO_NUMBER,  // Text this number
         from: process.env.FROM_NUMBER // From a valid Twilio number
     })
     .then(function(message) {
         console.log(message.sid);
+        console.log('message ->', req.body);
+        
     });
     res.sendStatus(200);
 });
 
 module.exports = router;
+
+
+
+

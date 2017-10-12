@@ -10,6 +10,7 @@ var send = require('./routes/send');
 
 //middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 app.use('/send', send);
