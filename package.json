@@ -1,0 +1,28 @@
+{
+  "name": "spikes",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "twilio": "^3.8.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katyasoup/twilio-spike.git"
+  },
+  "bugs": {
+    "url": "https://github.com/katyasoup/twilio-spike/issues"
+  },
+  "homepage": "https://github.com/katyasoup/twilio-spike#readme",
+  "description": ""
+}

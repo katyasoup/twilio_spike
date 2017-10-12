@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./vendors/angular.min.js"></script>
+    <script src="./client.js"></script>
+    <title>Twilio Spike</title>
+</head>
+<body ng-app="myApp">
+    <main ng-controller="PageController as pc">
+        <h1>Twilio API Spike</h1>
+        <p>Enter your message here:</p>
+        <input ng-model="pc.message" type="text" placeholder="1600 character limit" maxlength="1600">
+        <button ng-click="pc.sendMessage()">Send Message</button>
+    </main>
+</body>
+</html>
