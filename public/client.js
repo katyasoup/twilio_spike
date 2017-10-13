@@ -16,6 +16,6 @@ myApp.controller('PageController', function ($http) {
             method: 'POST',
             url: '/send',
             data: messageToSend
-        });
+        }).then(vm.message='');
     };
 });
